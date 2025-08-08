@@ -12,6 +12,7 @@ I'm currently expecting to put a lot of ordered lists and oneliners here.
 Todo: 
 * investigate best way to mark up individual lines with a "AppliesToQubesVersion" metadata.
 * Decide how much to split into small files/directories.
+    * flat structure, with multilevel numeric prefixes for easier commandline discovery?
 * Use sparse numeric prefix at each level. (simplifies shell navigation, sorting, and file insertion)
 
 This is far from a handbook, but I find it good personal discipline to maintain:
