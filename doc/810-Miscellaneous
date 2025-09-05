@@ -4,6 +4,7 @@
 
 See [https://www.qubes-os.org/doc/how-to-back-up-restore-and-migrate/]
 
+* Before you re-use the disk of original installation, make sure to verify that all data are backed up. see note on **Verify backup integrity, do not restore the data**
 * Make sure that Qubes is running correctly on the new machine before
     you try to restore any data.
 * If the hardware is not identical, do not restore the qubes with PCI
