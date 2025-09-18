@@ -1,5 +1,7 @@
 # Miscellaneous
 
+* livecd: add rd.live.check  to vmlinuz line.
+
 ## Transfer or duplicate to another computer 
 
 See [https://www.qubes-os.org/doc/how-to-back-up-restore-and-migrate/]
