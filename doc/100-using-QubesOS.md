@@ -8,6 +8,8 @@ keywords
 * exfiltration of data 
 * theft of money or financial assets
 * credentials
+* malware, rootkit
+* APT (Advanced Persistent Threat) ?
 * ransomware
 * impersonation
 * anonymity
