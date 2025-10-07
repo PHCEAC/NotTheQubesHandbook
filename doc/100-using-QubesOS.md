@@ -1,4 +1,4 @@
-100 General use
+CT100 General use
 
 
 ## Threats
@@ -18,7 +18,7 @@ keywords
 * tracking
 * printer dots, watermarking
 * eavesdropping
-    * see 
+    * e.g. see https://www.theregister.com/2025/10/07/mouse_microphone_security/
 * ...
 
 ## Dealing with risky websites 
