@@ -15,6 +15,10 @@ keywords
 * anonymity
 * confidentiality 
 * deanonymisation
+* tracking
+* printer dots, watermarking
+* eavesdropping
+    * see 
 * ...
 
 ## Dealing with risky websites 
