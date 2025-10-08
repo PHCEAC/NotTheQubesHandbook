@@ -11,3 +11,7 @@ See [https://www.qubes-os.org/doc/how-to-back-up-restore-and-migrate/]
     you try to restore any data.
 * If the hardware is not identical, do not restore the qubes with PCI
     devices, or make sure to verify that the assignments are correct.
+
+## misc 4.3 related 
+
+* https://forum.qubes-os.org/t/r4-3-rc2-sys-usb-stopped-working-after-dist-upgrade/36410/
