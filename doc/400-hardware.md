@@ -5,7 +5,12 @@
 
 ### IOMMU groups 
 
+TODO: make it create a file with a dated filename.
+
+Launch the Dom0 as a regular linux kernel. then run:
+
 for d in /sys/kernel/iommu_groups/*/devices/*; do n=${d#*/iommu_groups/*}; n=${n%%/*}; printf 'IOMMU group %s ' "$n"; lspci -nns "${d##*/}"; done
+
 
 
 ### misc note on starting a second x server 
