@@ -14,9 +14,11 @@
 
         https://forum.qubes-os.org/t/didnt-read-guide-didnt-bother-to-understand-qubes-os-didnt-listen-to-feedback-and-then-left/35976/17
 
+## Default configuration and qubes
 
+### Salt: restore or create default qubes 
 
-
+https://forum.qubes-os.org/t/accidentally-deleted-one-of-the-appvms-pls-help/37728/2
 
 
 
