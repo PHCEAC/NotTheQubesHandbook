@@ -11,3 +11,16 @@ So we have 4 use cases here.
 * "View in Disposable VM with enabled networking"
 * "Edit in Disposable VM with disabled networking"
 * "Edit in Disposable VM with enabled networking"
+
+
+
+## set a specific dvm template as the converter template?
+
+https://forum.qubes-os.org/t/possible-to-set-a-specific-qube-only-for-converting-pdf-images/38012/2
+
+
+
+
+
+
+
