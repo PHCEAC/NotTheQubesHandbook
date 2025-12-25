@@ -1,6 +1,9 @@
 
 
+
+
 From Adrelanos https://github.com/QubesOS/qubes-issues/issues/1118#issuecomment-131395780
+where View-in-DispVM behaviour was created.
 
 So we have 4 use cases here.
 
