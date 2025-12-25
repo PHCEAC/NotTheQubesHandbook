@@ -12,7 +12,22 @@ So we have 4 use cases here.
 * "Edit in Disposable VM with disabled networking"
 * "Edit in Disposable VM with enabled networking"
 
+## SvenSemmler at https://github.com/QubesOS/qubes-issues/issues/1121#issuecomment-830442077
 
+set the respective policies (OpenURL and
+OpenInVM) to 'ask' which allows me to always choose:
+
+URLs:
+
+- open in online dvm (aka clearnet)
+- open in tor dvm (i.e. whonix)
+- open in already existing dispVM ("disp1234")
+- open in specialized qube (i.e. the one where I'm logged into GitHub)
+
+VMs:
+
+- open in offline dvm
+- open in already existing dispVM ("disp1234")
 
 ## set a specific dvm template as the converter template?
 
