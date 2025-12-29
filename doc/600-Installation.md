@@ -55,8 +55,8 @@ Initial setup is done by initial-setup-graphical
 
 *    /usr/libexec/initial-setup/initial-setup-graphical
 *    /usr/libexec/initial-setup/initial-setup-text
-
-If the setup fails, or is incomplete, then it may be possible to start the script manually.
+* If the setup fails, or is incomplete, then it may be possible to start the script manually.
+* Seen here: https://forum.qubes-os.org/t/docs-should-mention-initial-setup/29461
 
 ### Qubes initial configuration failed.
 
