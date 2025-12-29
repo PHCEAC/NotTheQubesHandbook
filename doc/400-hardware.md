@@ -3,6 +3,10 @@
 
 ## PCI Passthrough
 
+### Miscellaneous links
+
+*   https://forum.qubes-os.org/t/issues-with-gpu-passthrough-amdgpu/15735
+
 ### IOMMU groups 
 
 TODO: make it create a file with a dated filename.
