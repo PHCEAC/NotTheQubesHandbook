@@ -40,16 +40,14 @@ From FranklyFlawless: try commands systemctl status checkisomd5@dev-sda.service 
 * media problems
 * initial boot failure
 
-### Qubes initial configuration failed.
 
-* Error message : "Qubes initial configuration failed. Login to the system and check /var/log/salt/minion for details. You can retry configuration by calling 'sudo qubesctl --all state.highstate' in dom0 (you will get detailed state there)."
-* suspect bad media 
-  
-
-If the installation shows unexpected failures
+If the installation shows unexpected failures, first of all:
 
 * Verify the downloaded ISO file : https://www.qubes-os.org/security/verifying-signatures/#how-to-verify-the-cryptographic-hash-values-of-qubes-isos
 * Verify the ISO after writing to the media:  https://www.qubes-os.org/security/verifying-signatures/#how-to-re-verify-installation-media-after-writing
+* If they are both correct, then read on.
+
+
 
 ## Initial setup failure
 
@@ -60,5 +58,11 @@ Initial setup is done by initial-setup-graphical
 
 If the setup fails, or is incomplete, then it may be possible to start the script manually.
 
+### Qubes initial configuration failed.
+
+* Error message : "Qubes initial configuration failed. Login to the system and check /var/log/salt/minion for details. You can retry configuration by calling 'sudo qubesctl --all state.highstate' in dom0 (you will get detailed state there)."
+* suspect bad media
+* Seen here: https://forum.qubes-os.org/t/qubes-4-2-initial-configuration-failed/24168
+  
 
 
