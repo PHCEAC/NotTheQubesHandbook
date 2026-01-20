@@ -2,6 +2,13 @@
 
 * livecd: add rd.live.check  to vmlinuz line.
 
+Troubleshooting Dom0 kernel
+
+* increase/decrease number of retined kernels : installonly_limit=3 (in /etc/dnf/dnf.conf )
+* (old) https://forum.qubes-os.org/t/qubes-users-qubes-update-how-to-hold-an-old-kernel/11909/10
+
+
+
 ## Transfer or duplicate to another computer 
 
 See [https://www.qubes-os.org/doc/how-to-back-up-restore-and-migrate/]
