@@ -3,13 +3,12 @@
 etc etc todo
 
 
-remove ```quiet rhgb``` :  See output from the boot process
+* remove ```quiet rhgb``` :  See output from the boot process
+* rd.plymouth=0 plymouth.enable=0   : do not use plymouth
 
-rd.plymouth=0 plymouth.enable=0   : do not use plymouth
+* systemd.mask=        : prevent a systemd service from starting.
 
-systemd.mask=        : prevent a systemd service from starting.
-
-rd.driver.blacklist=nouveau nvidia-drm.modeset=0 : e.g. to prevent gpu drivers from loading. (this one for Nvidia passthrough https://forum.qubes-os.org/t/salt-automating-nvidia-gpu-passthrough/30038/10 )
+* rd.driver.blacklist=nouveau nvidia-drm.modeset=0 : e.g. to prevent gpu drivers from loading. (this one for Nvidia passthrough https://forum.qubes-os.org/t/salt-automating-nvidia-gpu-passthrough/30038/10 )
 
 
 
