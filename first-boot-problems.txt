@@ -1,0 +1,3 @@
+first-boot-problems.txt
+
+https://doc.qubes-os.org/en/latest/user/troubleshooting/pci-troubleshooting.html#domain-has-failed-to-start-internal-error-unable-to-reset-pci-device-no-flr-pm-reset-or-bus-reset-available
