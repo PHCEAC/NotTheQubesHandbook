@@ -9,7 +9,9 @@ etc etc todo
 
 * remove ```quiet rhgb``` :  See output from the boot process
 * rd.plymouth=0 plymouth.enable=0   : do not use plymouth
-* https://forum.qubes-os.org/t/qubes-blank-screen-after-disk-decryption-existing-install/25185/7
+* For Xen command line (multiboot2 line): ```loglvl=all guest_loglvl=all vga=,keep```
+For kernel command line (first module2 line): ```console=hvc0 earlyprintk=xen```
+    https://forum.qubes-os.org/t/qubes-blank-screen-after-disk-decryption-existing-install/25185/7
 
 * systemd.mask=        : prevent a systemd service from starting.
 
