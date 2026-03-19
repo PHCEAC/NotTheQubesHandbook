@@ -9,7 +9,7 @@ aside   : what is a vm?
 
 ## Qubes Architecture
 
-* Overview: 
+* Overview: https://www.qubes-os.org/attachment/doc/arch-spec-0.3.pdf
 
 * Why Xen?
     * https://xenproject.org/pdf/Qubes-OS-and-Xen-Project.pdf
