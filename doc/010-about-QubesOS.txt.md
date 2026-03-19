@@ -6,3 +6,11 @@
     * fex document viewer
 aside   : what is a vm?
 * A set of technologies to enable and control interactions...
+
+## Qubes Architecture
+
+* Overview: 
+
+* Why Xen?
+    * https://xenproject.org/pdf/Qubes-OS-and-Xen-Project.pdf
+    * 
