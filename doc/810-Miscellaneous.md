@@ -8,6 +8,14 @@ Troubleshooting Dom0 kernel
 * (old) https://forum.qubes-os.org/t/qubes-users-qubes-update-how-to-hold-an-old-kernel/11909/10
 
 
+## Updates
+
+* Dom0 wont update
+     * sudo qubes-dom0-update --clean
+     * Not dnf clean
+     * Seen at https://forum.qubes-os.org/t/dom0-now-failing-to-update-4-3/39870/4
+
+
 
 ## Transfer or duplicate to another computer 
 
