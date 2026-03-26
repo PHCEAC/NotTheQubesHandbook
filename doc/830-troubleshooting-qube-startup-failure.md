@@ -47,7 +47,20 @@ and paste the output here.
     
      https://forum.qubes-os.org/t/no-qubes-launch-after-booting-qubes-4-3-menu-doesnt-work-qubes-domains-doesnt-work/39501/9
 
+## Cannot set template to nonexistent qube
 
+This should be impossible.
+
+https://forum.qubes-os.org/t/no-qubes-launch-after-booting-qubes-4-3-menu-doesnt-work-qubes-domains-doesnt-work/39501/10
+
+You can fix this issue by:
+```
+sudo systemctl stop qubesd
+sudo cp /var/lib/qubes/qubes.xml /var/lib/qubes/qubes.xml.manual-bak
+sudo nano /var/lib/qubes/qubes.xml
+sudo systemctl start qubesd
+```
+When opening the editor, search for default-dvm-Fedora-43 entries and substitute it for another valid qube, which, I suppose, should be default-dvm.
 
 # disposable 
 
