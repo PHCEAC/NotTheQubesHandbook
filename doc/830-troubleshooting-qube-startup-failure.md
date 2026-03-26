@@ -9,6 +9,38 @@
 * Often it is solved by a temporary increase of the timeout.
     * qvm-pref??
 
+## is the failure for ALL qubes?
+
+* Can you start a qube with netvm=='' ?
+     * For example, try ```Vault``` qube
+    * Try your main template
+    * Try template of mgmt qubes
+
+## all qubes fail to start 
+
+What is the error message?
+
+* qubesd not running
+* lvm problems
+* virt not enabled
+
+[quote="Atrate, post:3, topic:39501, full:true"]
+Please paste the output of running
+
+```
+sudo systemctl status --failed
+```
+
+in `dom0`. Also, for each failed unit from that output, please run
+
+```
+sudo systemctl status UNITNAME
+```
+
+and paste the output here.
+[/quote]
+
+
 
 # disposable 
 
