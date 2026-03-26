@@ -2,7 +2,20 @@
 
 Possible storage backends: lvm vs btrfs? Others?
 
-# LVM volume group is full, prevents startup of any vm
+##  Manual repair required! ... Failed to locally activate thin pool qubes_dom0/vm-pool.
+```
+Error: Check of pool qubes_dom0/vm-pool failed (status:64). Manual repair required!
+Aborting. Failed to locally activate thin pool qubes_dom0/vm-pool.
+```
+sudo lvconvert --repair qubes_dom0/vm-pool
+
+See:
+
+* https://forum.qubes-os.org/t/no-vm-other-than-dom0-is-running/39455/5
+* https://forum.qubes-os.org/t/urgent-help-needed-lvm-thin-pool-problems-no-disk-space-problem/34181/2
+* https://forum.qubes-os.org/t/4-3-upgrade-error-check-of-pool-qubes-dom0-vm-pool-failed/38215
+
+## LVM volume group is full, prevents startup of any vm
 
 Message: Cannot create new thin volume, free space in thin pool <qubes/poolhd0> reached threshold.
 
@@ -22,4 +35,8 @@ https://forum.qubes-os.org/t/how-can-i-delete-all-names-with-the-file-extension-
 
 https://www.qubes-os.org/doc/mount-lvm-image/
 
+## Not a problem, normally? 
 
+```WARNING: Sum of all thin volume sizes exceeds the size of thin pools and the size of whole volume group```
+
+This is expected - we can use thin volumes to allow over-commit. This message is indicating that the VMs "think" they can write more data than the total space on the disk.
