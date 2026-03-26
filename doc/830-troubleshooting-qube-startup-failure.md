@@ -41,6 +41,12 @@ sudo systemctl status UNITNAME
 and paste the output here.
 [/quote]
 
+## qubesd
+
+* journalctl -xeu qubesd
+    
+     https://forum.qubes-os.org/t/no-qubes-launch-after-booting-qubes-4-3-menu-doesnt-work-qubes-domains-doesnt-work/39501/9
+
 
 
 # disposable 
