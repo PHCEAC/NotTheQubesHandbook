@@ -20,7 +20,8 @@
 
 What is the error message?
 
-* qubesd not running
+* "QUBESD_SOCKET"... qubesd not running?
+*  qubesd not running
 * lvm problems
 * virt not enabled
 
