@@ -4,11 +4,14 @@
 
 # Troubleshooting: Using grub: modify a grub entry, change Dom0 kernel parameters
 
+Was here:
+https://forum.qubes-os.org/t/troubleshooting-using-grub-modify-a-grub-entry-change-dom0-commandline-add-or-remove-kernel-parameters/39265
 
-
-Note: this is a first try, made because forum search was not helping. I propose it as a potential Community guide.
+ToDo:
+* Unsafe shutdowns comment here https://forum.qubes-os.org/t/troubleshooting-using-grub-modify-a-grub-entry-change-dom0-commandline-add-or-remove-kernel-parameters/39265/2
 
 Troubleshooting: Use grub for temporary changes when Qubes-OS is booting
+
 For some problems, it can be useful to change the way Qubes starts at boot time.
 
 This guide is about changing the very first part of boot, when xen and the Dom0 kernel are being started. In most cases, they are started by the grub bootloader.
