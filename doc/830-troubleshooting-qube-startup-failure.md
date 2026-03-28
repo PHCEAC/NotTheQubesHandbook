@@ -41,6 +41,15 @@ sudo systemctl status UNITNAME
 and paste the output here.
 [/quote]
 
+## hardware does not support IOMMU/VT-d/AMD-Vi”
+
+```
+Failed to start an HVM qube with PCI devices assigned. hardware does not support IOMMU/VT-d/AMD-Vi”
+```
+* Possibly an error in BIOS configuration.
+    * If the problem appeared suddenly, verify the age of the CMOS battery.
+
+
 ## qubesd
 
 * journalctl -xeu qubesd
