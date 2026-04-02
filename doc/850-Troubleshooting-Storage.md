@@ -2,6 +2,17 @@
 
 Possible storage backends: lvm vs btrfs? Others?
 
+## Thin pool ... transaction id is ... while expected ... Failed to suspend ...pool with queued messages. Failed to update pool
+
+```
+Thin pool qubes_dom0-vm–pool-tpool (253:9) transaction id is 10690, while expected 10691
+Failed to suspend qubes_dom0/vm-pool with queued messages.
+Failed to update pool qubes_dom0/vm-poo
+```
+
+https://forum.qubes-os.org/t/urgent-help-needed-lvm-thin-pool-problems-no-disk-space-problem/34181/2
+
+
 ##  Manual repair required! ... Failed to locally activate thin pool qubes_dom0/vm-pool.
 ```
 Error: Check of pool qubes_dom0/vm-pool failed (status:64). Manual repair required!
