@@ -19,7 +19,11 @@ qrecec-client contacts daemon, communicates with agent
 
 ### qrexec timeout
 
+solution is here:
 
+ In dom0: ```qvm-prefs <qube name> qrexec_timeout 300```
+ 
+ <!-- Another way is to tell systemd not to start the problem service using the kernelopts option, and to do the resizing manually after: qvm-prefs <qube name> kernelopts systemd.mask=qubes-rootfs-resize.service-->
 
 ### services do not run...
 * The scripts in /etc/qubes-rpc need to be proper scripts, with executable bit set (chmod 0755) and proper shebang (#!/bin/sh for example).
