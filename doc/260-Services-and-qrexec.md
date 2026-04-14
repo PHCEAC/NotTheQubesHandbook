@@ -4,7 +4,8 @@
 
 ## qrexec
 
-
+* code : https://github.com/QubesOS/qubes-core-qrexec
+* docs: https://doc.qubes-os.org/en/latest/developer/services/qrexec.html
 
 ## qrexec troubleshooting
 
