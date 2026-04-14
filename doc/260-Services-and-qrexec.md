@@ -4,6 +4,14 @@
 
 ## qrexec
 
+In short:
+
+qrexec is a "remote procedure call" (RPC) framework for Qubes.
+
+qrecec-client contacts daemon, communicates with agent
+
+
+
 * code : https://github.com/QubesOS/qubes-core-qrexec
 * docs: https://doc.qubes-os.org/en/latest/developer/services/qrexec.html
 
