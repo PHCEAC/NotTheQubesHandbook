@@ -1,5 +1,5 @@
 
-See \@Ben Grande at  https://forum.qubes-os.org/t/is-4-3-sluggish-for-you/38816/32
+See \@ben-grande at  https://forum.qubes-os.org/t/is-4-3-sluggish-for-you/38816/32
 
 There are ways to time startup of a qube, you can do this for a stopped anon-whonix:
 ```
@@ -7,7 +7,6 @@ time qvm-run -p --service anon-whonix qubes.WaitForSession
 ```
 And from a running anon-whonix:
 ```
-time qvm-run -p --service anon-whonix janondisttorbrowser.desktop
+time qvm-run -a --service anon-whonix qubes.StartApp+janondisttorbrowser
 ```
-
-You can do this same experiment
+( Corrected by \@barto )
