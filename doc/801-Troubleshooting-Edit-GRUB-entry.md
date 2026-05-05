@@ -28,9 +28,12 @@ This guide is about changing the very first part of boot, when xen and the Dom0 
     * Press or hold SHIFT to stop the timer and go to the menu.
 
 In the menu, you can select a different “entry”, using the Up and Down arrow keys. There may be troubleshooting entries, or ones to use different kernels. Press 'e' to edit an entry.
-After booting, you can verify which kernel was used in Dom0 terminal, by typing uname -a.
+After booting, you can verify which kernel was used in the Dom0 terminal, by typing uname -a.
 
-In the edit mode, can modify the entry to have different kernel parameters.
+In the edit mode, we can modify different lines the entry to change how Qubes will start:
+* in many cases we want to change the Linux kernel parameters for Dom0
+* Sometimes we change parameters for Xen
+* There are some other uses which we do not cover here.
 
 ## Change the Dom0 kernel parameters
 
@@ -71,11 +74,21 @@ Add usbcore.authorized_default=0 : if Dom0 can see a USB controller, then only m
     * blacklist a kernel module
 
 ToDo
-Display is black or corrupted
+* Display is black or corrupted
 nomodeset or modeset=0 : prevent Kernel Mode Setting from using GPU drivers
-… ToDo more to add here.
-Some more technical changes used in rare cases
-Boot the Dom0 kernel without xen. Why…?
-Hide some devices for Passthrough
-Todo…
+* … ToDo more to add here.
+* Some more technical changes used in rare cases
+
+## Change the Xen hypervisor parameters
+
+For these changes, find the line that begins
+```multiboot2   ```
+
+* after install qubes (reboot), add x2apic=false
+    *  Seen to solve an install problem https://www.reddit.com/r/Qubes/comments/10z4d8y/problem_installing/ possibly a solution to bad xhci support https://forum.qubes-os.org/t/unable-to-install-4-1-0-udev-error-while-assigning-device-slot-id/9151 Later fixed by BIOS update.
+
+* Boot the Dom0 kernel without xen. Why…?
+* Hide some devices for Passthrough
+
+* Todo…
 
