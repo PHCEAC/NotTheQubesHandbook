@@ -21,11 +21,9 @@ mount /dev/mapper/vg0-qubes-root /sysroot
      * e.g. ```Failed to mount boot-efi.mount - /boot/efi
 Dependency failed for local-fs.target - Local File System```
     * Some other prompt like: ```Press Enter for maintenance (or press Control-D to continue):```
-         
-* 
 * ...
 
-Solutions
+## Solutions
 
 
     
