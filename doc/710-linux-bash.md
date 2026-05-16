@@ -1,9 +1,39 @@
 
-
 # Using linux, bash, commands, ...
 
-What does the command line do?
+What does the terminal do?
 It lets us launch and interact with "processes".
+
+## First steps at the command prompt
+
+We will begin by entering single commands, where we type a program name.
+
+**TODO** the following is not as useful as I thought, but reworked?
+
+It may be simpler to change to the directory where the offending file is. Do you know this trick: 
+* First run ```cd``` - it should Change Directory for you, and take you to your "home" directory, which is  /home/qubes for you.
+* Run ```pwd``` to see where you are. ```ls``` shows that QubesIncoming is here.
+* Now type ```cd Q\<tab key>``` where \<tab key> means to press that key on the keyboard (it might look like this:  <big>↹ </big>).
+    * If there is only one item beginning with 'Q' in the directory, then it will be filled in magically, and you can press the \<return> key.
+    * If there are other items beginning with Q, then the name will be filled as much as possible. You can type some extra to choose which one.
+    * If you press \<return> and there is "Not found" or other error, use the up arrow key to get the last command back, ready for you to change it.
+
+Now you have less to type when there are long filenames. You are already in /home/qubes/QubesIncoming/ directory.
+
+If you want visual method, type ```thunar``` - if a window appears, select the menu "View>Show hidden items". There is surely a way to delete the folder permanently, but I do not know it :frowning: 
+
+To continue in the terminal:
+
+* Enter and run  ```ls -a``` to see the hidden directory name.
+* If you want to move a directory to another qube,  
+  ```qvm-move-to-vm destinationqube .\<tab>```
+   will fill in the name of the directory.
+* If you want to delete it, then you can use
+   ```rm -r .backup#restore``` , or ```rm -rf ...``` if there are read-only problems.
+
+
+
+## About processes
 
 What is a process?
 * computes - it is normally launched from a file containing instructions
@@ -44,7 +74,8 @@ pwd. - part of environment for a process
 
 todo: filesystem, files and directories.
 
-## Using bash history 
+## Using bash history
+
 (todo : fix markdown)
 repeat last command: ```!!```
 
@@ -64,5 +95,14 @@ modifiers, can be used after a \::
 
 delete an item :
     ```history -d <number>``` then ```history -w```
+
+
+## Commands in Dom0
+
+### Copy or move files from Dom0 to another qube
+
+The first parameter of ```qvm-move-to-vm``` is the name of the destination qube. After that, the paths of the files/directories you want to move. 
+
+Make sure the destination has enough free space.
 
 
