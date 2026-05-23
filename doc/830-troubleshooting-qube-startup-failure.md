@@ -4,10 +4,21 @@
 
 * When qubes tries to start a qube, it waits for a response indicating that the qube has started correctly.
 * If no response comes before the timeout then an error is displayed
+* First thing: look at the qube console fole indicated:
+     * does it end with "JOB xxxxxxx Running"?
+     * if yes, see "extend qrexec timeout"
 * Often this happens due to long housekeeping
     task at startup
   * Often it is solved by a temporary increase     of the timeout.
     * in dom0, qvm-prefs ??
+
+
+* qrexec: increase the timeout
+  *  using a command in Dom0 :
+     `qvm-prefs <vmname> qrexec_timeout 3600`
+   * start the qube again
+  * if the job succeeds, put the timeout back to default: ```qvm-prefs VMNAME -D```
+
 
 ## is the failure for ALL qubes?
 
