@@ -10,14 +10,19 @@
 * Often this happens due to long housekeeping
     task at startup
   * Often it is solved by a temporary increase     of the timeout.
-    * in dom0, qvm-prefs ??
+    * see next:
 
 
 * qrexec: increase the timeout
   *  using a command in Dom0 :
      `qvm-prefs <vmname> qrexec_timeout 3600`
-   * start the qube again
-  * if the job succeeds, put the timeout back to default: ```qvm-prefs VMNAME -D```
+   * start the qube again, tail -f the console logfile.
+  * if the job succeeds, put the timeout back to default: ```qvm-prefs VMNAME -D``` and verify the template of your qube.
+  * if still timeout: is it logical?
+
+* typical long jobs:
+  * this: Job qubes-rootfs-resize.service/start running (57s / no limit)
+  * 
 
 
 ## is the failure for ALL qubes?
