@@ -12,6 +12,17 @@
 
 This is to make sure that the data we read from the medium is identical to the original ISO file.
 
+https://doc.qubes-os.org/en/latest/project-security/verifying-signatures.html#how-to-re-verify-installation-media-after-writing
+
+If the sig fails:
+
+* corrupt sig file? clearly marked
+* failing disk :
+  * use checksum file, try multiple times, 
+  * compare with uninstalled but verified iso
+    * find position of errors
+* 
+
 ### dd and XXXsum
 
 ### Find the position of errors on the medium
