@@ -9,7 +9,7 @@ What is/are...
   * https://github.com/QubesOS/qubes-issues/issues/9771
  
 * See also Atrate comment in above for other guid related issues.
-  * esp fix to abs/rel position handling.
+  * esp #7316 fix to abs/rel position handling.
 
 
 ## Nvidia
