@@ -1,5 +1,12 @@
 999-todo.md
 
+## prefs and features
+
+qvm-create -l red -t <NEW_TEMPLATE> <NEW_DISPOSABLE_TEMPLATE>
+* qvm-prefs <DISP_TPL> template_for_dispvms True
+* qvm-features <DISP_TPL> appmenus-dispvm 
+* qubes-prefs default-dispvm <DISP_TPL>
+
 
 ## different stub drivers:
 useful notes:
@@ -11,3 +18,5 @@ v4.1 users with exclusively OVMF guests can also add an "options vfio-pci disabl
 ## config...
 
 forum.qubes-os.org/t/qubes-user-data-utilize-vm-config-to-execute-scripts-at-qube-launch-even-in-dispvms/34602
+
+
