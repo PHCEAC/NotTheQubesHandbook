@@ -12,6 +12,6 @@ new user:
 
 When getting serious:
 
-* set a password in Dom0
+* set a root password in Dom0
      * it may be helpful if there is ever a boot problem
 * Start doing those backups
