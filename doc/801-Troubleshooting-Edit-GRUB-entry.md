@@ -39,7 +39,7 @@ In the edit mode, we can modify different lines the entry to change how Qubes wi
 
 This is almost always why we are here.
 
-In the GRUB edit mode:
+### How to navigate in the GRUB edit mode:
 
 * Each item can be quite long, and may be split over several lines, or have the end hidden off the screen.
 * Find the item that begins like this: ```module2  /vmlinuz```
@@ -60,16 +60,22 @@ If you find a good setting, make a careful note of the changes, because you may 
 
 Some typical parameters we might add or remove
 
-USB keyboard problems
+### USB keyboard problems
 
-Add qubes.skip_autostart : prevents all qubes from automatic starting. This is useful when sys-usb has a problem and does not send keyboard/mouse data to Dom0. Normally, the next two items are used at the same time.
+* qubes.skip_autostart (Add it)
+  *  Add this to prevent all qubes from automatic starting. This is useful when sys-usb has a problem and does not send keyboard/mouse data to Dom0. Normally, the next two items are used at the same time.
+* Remove rd.qubes.hide_all_usb
+  * Remove it to make the USB controllers be visible to Dom0. It may not be enough to allow use of a USB keyboard, because usbcore may be protecting  dom0 from usb devices.
+* Add usbcore.authorized_default=0
+  * Add this so that if Dom0 can see a USB controller, then only mouse and keyboard devices will be usable.
 
-Remove rd.qubes.hide_all_usb : makes the USB controllers be visible to Dom0. It may not be enough to allow use of a USB keyboard
+### Boot messages from the kernel
 
-Add usbcore.authorized_default=0 : if Dom0 can see a USB controller, then only mouse and keyboard devices will be usable.
-
-* Get better information for debugging
+* rhgb quiet (remove them)
     * Remove “rhgb” and “quiet” : you will see lots of progress messages scroll past as the system starts up. This is often useful to see the last few messages before it stops.
+* boot_delay=5 (add it)
+  * If the kernel message go too fast, this will slow them down.
+
 * Prevent some drivers from loading
     * blacklist a kernel module
 
