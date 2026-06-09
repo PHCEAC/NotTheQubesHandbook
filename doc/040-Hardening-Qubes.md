@@ -6,6 +6,15 @@ Todo: move to Securing your workflows section?
 
 ## What are you worried about?
 
+What you have vs what you do vs who you are
+
+* valuables in:
+  * static data
+  * backups
+  * ram
+  * swap
+  * HID communication
+
 * Loss of access to something you have:
   * your valuable or irreplacable data
   * your passwords or secrets
@@ -27,11 +36,7 @@ What cause(s):
 * hacking + extortion
 * hacking + exfiltration
 
-* valuables in:
-  * static data
-  * ram
-  * swap
-  * HID communication
+
 
 ## Hardening dom0
 
