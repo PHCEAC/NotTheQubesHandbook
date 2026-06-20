@@ -21,3 +21,5 @@ $ xprop -id 0x400002 _NET_WM_NAME
 _NET_WM_NAME(UTF8_STRING) = "Qubes"
 
 xprop -id 0x400002 -format _NET_WM_NAME 8u -set _NET_WM_NAME 'dwm'
+
+[Cite rustybird](https://forum.qubes-os.org/t/telegram-desktop-identifying-qubes-in-standalonevm/17906/6)
