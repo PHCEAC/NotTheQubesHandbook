@@ -1,6 +1,15 @@
 830-troubleshooting-qube-startup-failure.md
 
-## A qube has failed to start : cannot connect to qrexec agent for 60 second, see var/log/xenconsole/guest
+## A qube has failed to start : cannot connect to qrexec agent for 60 second, see var/log/xenconsole/guest-qubename.log
+
+You see an error message: 
+
+```
+Jun 19 16:37:23 dom0 qvm-start[3868]: Error: Cannot connect to qrexec agent for 60 seconds, see /var/log/xen/console/guest-sys-usb.log for details
+```
+[/quote]
+
+Make a copy of this file for each boot. Compare the good and bad ones... especially the last parts. You are either looking for error/fail/timeout/etc or for some long process that does not complete.
 
 * When qubes tries to start a qube, it waits for a response indicating that the qube has started correctly.
 * If no response comes before the timeout then an error is displayed
@@ -9,19 +18,17 @@
      * if yes, see "extend qrexec timeout"
 * Often this happens due to long housekeeping
     task at startup
-  * Often it is solved by a temporary increase     of the timeout.
+  * Often it is solved by a temporary increase of the timeout.
     * see next:
-
-
 * qrexec: increase the timeout
   *  using a command in Dom0 :
      `qvm-prefs <vmname> qrexec_timeout 3600`
    * start the qube again, tail -f the console logfile.
   * if the job succeeds, put the timeout back to default: ```qvm-prefs VMNAME -D``` and verify the template of your qube.
   * if still timeout: is it logical?
-
 * typical long jobs:
   * this: Job qubes-rootfs-resize.service/start running (57s / no limit)
+  * fsck - the qube was not shut down and it must test the disks
   * 
 
 
