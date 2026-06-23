@@ -1,4 +1,4 @@
-# What is Qubes 
+ft# What is Qubes 
 
 * A desktop OS where different activities can be isolated by placing them inside their own virtual machines.
     * fex: some hardware functions which deal with devices we may not trust
@@ -14,3 +14,5 @@ aside   : what is a vm?
 * Why Xen?
     * https://xenproject.org/pdf/Qubes-OS-and-Xen-Project.pdf
     * 
+
+* faq: https://doc.qubes-os.org/en/latest/introduction/faq.html
