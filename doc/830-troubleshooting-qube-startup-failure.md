@@ -11,6 +11,15 @@ Jun 19 16:37:23 dom0 qvm-start[3868]: Error: Cannot connect to qrexec agent for 
 
 Make a copy of this file for each boot. Compare the good and bad ones... especially the last parts. You are either looking for error/fail/timeout/etc or for some long process that does not complete.
 
+* execute the following commands in dom0
+
+sudo systemctl status qubes-vm@sys-usb.service
+and
+
+sudo journalctl -xeu qubes-vm@sys-usb.service
+
+Some causes of this problem:
+
 * When qubes tries to start a qube, it waits for a response indicating that the qube has started correctly.
 * If no response comes before the timeout then an error is displayed
 * First thing: look at the qube console fole indicated:
