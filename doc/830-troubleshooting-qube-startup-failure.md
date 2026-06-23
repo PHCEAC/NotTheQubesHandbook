@@ -18,6 +18,10 @@ and
 
 sudo journalctl -xeu qubes-vm@sys-usb.service
 
+
+* permission to run mouse, go to Q menu, cog wheel menu, Qubes Tools, Qubes OS Global Config, USB Device tab.
+Switch Keyboard: and Mouse: from always ask to enable.
+
 Some causes of this problem:
 
 * When qubes tries to start a qube, it waits for a response indicating that the qube has started correctly.
