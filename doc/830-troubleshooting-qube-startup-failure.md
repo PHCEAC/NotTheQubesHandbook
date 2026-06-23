@@ -106,4 +106,59 @@ if has passed-through devices:
 
 # Standalone
 
-* trying to use kernel provided by Dom0 
+* trying to use kernel provided by Dom0
+
+ # sys-usb fauls to start
+
+ maybe:
+
+[quote="SteveC, post:5, topic:42145"]
+```
+Jun 20 16:57:22 dom0 qvm-start[3868]: Error: Cannot connect to qrexec agent for 60 seconds, see /var/log/xen/console/guest-sys-usb.log for details
+```
+[/quote]
+
+Make a copy of this file for each boot. Compare the good and bad ones... especially the last parts. You are either looking for error/fail/timeout/etc or for some long process that does not complete.
+
+[quote="phceac, post:6, topic:42145"]
+did you possibly keep your sys-usb from 4.2, and make a new one? If both are on AutoStart, then they will race to win the USB controller, but only one named"sys-usb" can be useful. So works/not works depends on who wins.
+
+[added in edit…]
+Another idea: if you see sys-usb runs until qrexec-timeout, is it doing some housekeeping? You can increase the timeout, so it gets to finish:
+
+[quote="phceac, post:2, topic:37296"]
+Try in a Dom0 terminal to run: `qvm-prefs $vm_name qrexec_timeout`
+
+If the value is equal to the delay you see before the startup error then make the value longer: ` qvm-prefs $vm_name `
+[/quote]
+
+https://forum.qubes-os.org/t/cant-start-appvm-after-shutdown/37296/2
+
+[quote="Tranquility, post:7, topic:42145"]
+increasing the ram of the sys-usb qubes for about 50 MiB to 100. i had the same qrexec error
+[/quote]
+
+
+[quote="corny, post:10, topic:42145"]
+cloning sys-usb and changing the kernel in advanced
+[/quote]
+
+
+
+ [quote="corny, post:10, topic:42145"]
+issue where my usb 2.0 port combined with newer kernel gave autostart issues
+[/quote]
+* 
+
+
+[quote="corny, post:10, topic:42145"]
+addtl pci USB card if you have one
+[/quote]
+
+
+
+
+
+
+
+
