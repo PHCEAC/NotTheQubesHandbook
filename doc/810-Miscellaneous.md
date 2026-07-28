@@ -14,6 +14,8 @@ Troubleshooting Dom0 kernel
      * sudo qubes-dom0-update --clean
      * Not dnf clean
      * Seen at https://forum.qubes-os.org/t/dom0-now-failing-to-update-4-3/39870/4
+  * Preventing and hiding qubes from updates
+    * Lots of details from experts here: https://forum.qubes-os.org/t/disable-qube-updates-for-a-specific-qube/
 
 
 
