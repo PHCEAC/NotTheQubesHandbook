@@ -47,7 +47,14 @@ If the installation shows unexpected failures, first of all:
 * Verify the ISO after writing to the media:  https://www.qubes-os.org/security/verifying-signatures/#how-to-re-verify-installation-media-after-writing
 * If they are both correct, then read on.
 
+## General installation troubleshooting
 
+* The Grub menu gives some different options:
+  * Latest kernel option
+  * "Troubleshooting" option
+* It is also possible to add troubleshooting items by editing the Grub boot lines. For example:
+  * Add rd.debug to the 'module2 vmlinux' line
+  * 
 
 ## Initial setup failure
 
