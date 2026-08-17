@@ -73,9 +73,10 @@ Some typical parameters we might add or remove
 
 * rhgb quiet (remove them)
     * Remove “rhgb” and “quiet” : you will see lots of progress messages scroll past as the system starts up. This is often useful to see the last few messages before it stops.
-* boot_delay=5 (add it)
+* boot_delay=5 (add it to vmlinux line)
   * If the kernel message go too fast, this will slow them down.
-
+* rd.debug (add to vmlinux line)
+  * Will give extra debugging information during the initrd stage of booting.
 * Prevent some drivers from loading
     * blacklist a kernel module
 
