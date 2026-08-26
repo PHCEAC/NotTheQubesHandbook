@@ -2,7 +2,7 @@
 
 * ```NetworkManager``` provides the widget and does the connection management
 * dnclient can be used for ad-hoc connections -
-ot installed in default qube templates (try installing dhcp-cluent, or somilar package)
+  not installed in default qube templates (try installing dhcp-cluent, or somilar package)
 
 
 ## Non sys-net qubes
