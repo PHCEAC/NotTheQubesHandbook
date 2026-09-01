@@ -5,6 +5,10 @@
 
 ## LVM Problems: I/O Errors make dom0 volume be read-only
 ​
+This can happen when one of the thin pools has no free space. It prevents the filesystem check from completing during boot. It shows as `fsck`
+
+If you hit this: check lvm lvs -a -o+lv_when_full,data_percent,metadata_percent qubes_dom0 first to see which specific pool is actually full before touching anything — don’t assume it’s vm-pool just because that’s the “main” one, since dom0’s own root filesystem has its own separate pool too.
+
 
 Laptop won’t boot after dom0 update got interrupted, stuck in emergency mode, fsck shows I/O error 
 
@@ -40,14 +44,17 @@ For anyone else who hits this, here’s what worked:
 8. Reactivate everything:
 
     lvm lvchange -ay qubes_dom0/root-pool
+   
     lvm lvchange -ay qubes_dom0/vm-pool
+   
     lvm lvchange -ay qubes_dom0/root
-9. Then finally run fsck:
+10. Then finally run fsck:
 
     fsck -y /dev/mapper/qubes_dom0-root
+    
     It fixed a bunch of inode ref-count errors and finished clean with no I/O error this time. Rebooted normally and everything came back up.
 
-If you hit this: check lvm lvs -a -o+lv_when_full,data_percent,metadata_percent qubes_dom0 first to see which specific pool is actually full before touching anything — don’t assume it’s vm-pool just because that’s the “main” one, since dom0’s own root filesystem has its own separate pool too.
+
 
 Also worth doing afterward: set thin_pool_autoextend_threshold in /etc/lvm/lvm.conf so pools grow automatically before hitting 100% again.
 
