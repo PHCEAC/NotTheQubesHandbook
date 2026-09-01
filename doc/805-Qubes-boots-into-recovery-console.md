@@ -1,10 +1,14 @@
 
 
 ​
+# Boot error: stuck in recovery console
 
+## LVM Problems: I/O Errors make dom0 volume be read-only
 ​
 
 Laptop won’t boot after dom0 update got interrupted, stuck in emergency mode, fsck shows I/O error 
+
+(https://forum.qubes-os.org/t/laptop-wont-boot-after-dom0-update-got-interrupted-stuck-in-emergency-mode-fsck-shows-i-o-error/43131/5)
 
 post by Martin32
 
@@ -27,8 +31,8 @@ For anyone else who hits this, here’s what worked:
     lvm vgchange -an qubes_dom0
 6. Extend the pool that’s actually short on space:
 
-lvm lvextend -L +5G qubes_dom0/root-pool
-lvm lvextend -L +5G qubes_dom0/vm-pool
+    lvm lvextend -L +5G qubes_dom0/root-pool
+    lvm lvextend -L +5G qubes_dom0/vm-pool
 7. Repair it:
 
     lvm lvconvert --repair qubes_dom0/root-pool
