@@ -35,8 +35,7 @@ For anyone else who hits this, here’s what worked:
     lvm lvextend -L +5G qubes_dom0/vm-pool
 7. Repair it:
 
-    lvm lvconvert --repair qubes_dom0/root-pool
-    
+    lvm lvconvert --repair qubes_dom0/root-pool    
     lvm lvconvert --repair qubes_dom0/vm-pool
 8. Reactivate everything:
 
