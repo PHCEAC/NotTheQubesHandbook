@@ -20,6 +20,8 @@
 
 https://forum.qubes-os.org/t/accidentally-deleted-one-of-the-appvms-pls-help/37728/2
 
+### Sudo and ther security inside qubes
 
-
+* https://forum.qubes-os.org/t/replacing-passwordless-root-with-a-dom0-prompt/19074
+* or only for dispvm: https://forum.qubes-os.org/t/compromised-via-qvm-move-qvm-copy/42475/55
     
