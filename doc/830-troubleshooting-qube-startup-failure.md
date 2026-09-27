@@ -44,7 +44,6 @@ Some causes of this problem:
   * fsck - the qube was not shut down and it must test the disks
   * 
 
-
 ## is the failure for ALL qubes?
 
 * Can you start a qube with no netvm=='' ?
@@ -75,6 +74,33 @@ What is the error message?
 
 ``` sudo systemctl status UNITNAME```
 
+
+
+ does return an error:
+
+## internal error: libxenlight failed to create new domain '<qube>'
+
+* click Start gives no change
+* qvm-start <qube> from a dom0 terminal gives this libxenlight error.
+
+The detailed log (/var/log/libvirt/libxl/libxl-driver.log) shows:
+
+libxl: libxl_dm.c:2857:stubdom_xswait_cb: Domain X:Stubdom Y for X startup: startup timed out
+libxl: libxl_create.c:2018:domcreate_devmodel_started: Domain X:device model did not start: -9
+
+Stubdom errors : see the dm logfile: var/log/xen/console/guest-<qube>-dm.log
+
+Fixed by martin32:
+
+1. Reinstall the corrupted admin tools:
+` sudo dnf reinstall qubes-core-admin-client
+
+2. Manually restart the GUI daemon process:
+` qvm-start-daemon --all --watch --kde
+
+Windows for running qubes should appear immediately.
+
+see forum: https://forum.qubes-os.org/t/all-qubes-fail-to-start-after-latest-dom0-update/42944/5
 
 ## hardware does not support IOMMU/VT-d/AMD-Vi”
 
