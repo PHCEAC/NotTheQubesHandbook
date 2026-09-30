@@ -28,7 +28,7 @@ This is a system which allows dom0 to reclaim memory from one qube to give it to
     * it has a minimum and a maximum amount of memory, which is provided according to need.
 * Inside a qube, a daemon sends memory usage information to dom0
     * For linux qubes, this is done by the
-      meminfo-writer service.
+      meminfo-writer service. (see [meminfo-writer](https://github.com/QubesOS/qubes-linux-utils/tree/main/qmemman)
     * For windows...? QWT?
     * this information is only useful if the memory balloning is active.
 * Inside dom0:
