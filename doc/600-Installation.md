@@ -63,6 +63,9 @@ Initial setup is done by initial-setup-graphical
 *    /usr/libexec/initial-setup/initial-setup-graphical
 *    /usr/libexec/initial-setup/initial-setup-text
 * If the setup fails, or is incomplete, then it may be possible to start the script manually.
+* open a terminal from dom0 and run
+    * sudo /usr/libexec/initial-setup/initial-setup-graphical
+    * then note the output from the terminal.
 * Seen here: https://forum.qubes-os.org/t/docs-should-mention-initial-setup/29461
 
 ### Qubes initial configuration failed.
