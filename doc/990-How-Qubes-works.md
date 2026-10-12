@@ -2,8 +2,18 @@ A bit ambitious this one...
 
 # how Qubes works...
 
-* Memory ballooning
+## what is a qube?
 
+## What is a VM?
+
+## What does xen do?
+
+* Starts the dom0 virtual machine
+* Starting and stopping virtual machines
+* Give direct hardware access to some VMs
+* Grant tables
+    * provide shared memory, so that some VMs can communicate
+    * tech doc here: https://xcp-ng.org/blog/2022/07/27/grant-table-in-xen/
 
 ## dom0
 
