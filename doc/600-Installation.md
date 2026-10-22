@@ -17,7 +17,25 @@ Stages:
 * https://www.qubes-os.org/doc/system-requirements/
 * 
 
+## Getting the ISO file
+
+It is not necessary to trust the source if the Qubes installer. 
+
+Download it from qubes-os website, or a mirror.
+
+If you already have a qubes system, then the Fedora lxde templates contain transmission-gtk bittorrent client. It is simple but seems fast and efficient, and it recovers well from bad connections, interruptions, and other problems.
+
+In any case, security during downloading is not important, but it is 100% necessary to do the  verifying signatures part that @artist linked.
+
 ## Checking the download 
+
+For the whole "authenticate the qubes-master-signing-key": if you have a **trusted** qubes installation, you can get the QMSK in dom0 now, by running :
+```sudo qubes-dom0-update qubes-distro-keys```
+I think it is as trusted as dom0 in your existing qubes system.  For me, that is very trusted. 
+Then I run ```qvm-copy-to-vm``` to copy the /usr/share/qubes/keys/qubes-master-key.asc file to my offline qube where I will test the signature of the ISO.
+
+
+
 
 ## Checking the media
 
