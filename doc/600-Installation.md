@@ -35,7 +35,7 @@ I think it is as trusted as dom0 in your existing qubes system.  For me, that is
 Then I run ```qvm-copy-to-vm``` to copy the /usr/share/qubes/keys/qubes-master-key.asc file to my offline qube where I will test the signature of the ISO.
 
 
-
+  
 
 ## Checking the media
 
