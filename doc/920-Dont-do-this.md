@@ -5,3 +5,7 @@
 * In Dom0: ```fdisk -l``` 
 
     Parses all partition tables, including ones under control of the enemy.
+* Tips on the Forum :
+    * https://forum.qubes-os.org/t/common-qubes-mistakes-that-will-make-you-unsafe/6024
+    * https://forum.qubes-os.org/t/unsafe-commands-in-dom0/42091
+    * ...
