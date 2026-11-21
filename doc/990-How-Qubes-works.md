@@ -1,8 +1,35 @@
 A bit ambitious this one...
 
-# how Qubes works...
+# How does Qubes OS work?
+
+## What is Qubes OS?
+
+* A collection of "qubes", each of which gives the user access to some resources.
+* By default, all qubes are heavily isolated:
+  * from each other
+  * from the hardware devices
+  * Shared user interfaces allow the user to interact with one qube at a time, while maintaining the isolation from other qubes.
+* A controller qube, named **dom0** manages the system:
+  *  creating new qubes
+  *  giving out access to some parts of the hardware
+  *  allowing each qube to have access to the functions and interfaces it is allowed
+  *  providing 
+
+In qubes-OS, the isolation and
+
+A **hypervisor** 
+
 
 ## what is a qube?
+
+A qube:
+
+* is a Virtual Machine, or VM
+* is allocated some part of the computer memory, and part of the CPU time, so that it can run.
+* has access to a minimal display, which can create windows by using a very simple framebuffer interface, with some very simple window controls.
+* has some inputs from the user - normally at least a mouse and keyboard, which only receive input when a window of that qube is focussed.
+* *may* be given access to some other hardware, like a network or USB controller
+
 
 ## What is a VM?
 
