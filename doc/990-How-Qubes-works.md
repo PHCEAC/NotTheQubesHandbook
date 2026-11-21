@@ -13,22 +13,20 @@ A bit ambitious this one...
   *  creating new qubes
   *  giving out access to some parts of the hardware
   *  allowing each qube to have access to the functions and interfaces it is allowed
-  *  providing 
-
-In qubes-OS, the isolation and
-
-A **hypervisor** 
+  *  providing interfaces for each qube to send data to other qubes
 
 
 ## what is a qube?
 
-A qube:
+In qubes-OS, each qube:
 
-* is a Virtual Machine, or VM
+* is a **Virtual Machine**, or **VM**
 * is allocated some part of the computer memory, and part of the CPU time, so that it can run.
 * has access to a minimal display, which can create windows by using a very simple framebuffer interface, with some very simple window controls.
 * has some inputs from the user - normally at least a mouse and keyboard, which only receive input when a window of that qube is focussed.
 * *may* be given access to some other hardware, like a network or USB controller
+
+The isolation and access to hardware are assured by  a  **hypervisor**. Qubes-OS uses the Xen hypervisor, which is a separate layer, in between dom0 and the real hardware.pà
 
 
 ## What is a VM?
